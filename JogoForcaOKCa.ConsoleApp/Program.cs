@@ -38,27 +38,26 @@
 
                 Console.Clear();
             } while (acertou == false && perdeu == false);
-
-            static void DesenharForca(int quantidadeErros)
+        }
+        static void DesenharForca(int quantidadeErros)
             {
                 string cabecaDifunto = quantidadeErros >= 1 ? " o " : " ";
                 string peitoralDifunto = quantidadeErros >= 2 ? "x" : " ";
                 string bracoEsquerdoDifunto = quantidadeErros >= 3 ? "/" : " ";
                 string bracoDireitoDifunto = quantidadeErros >= 3 ? @"\" : " ";
-                string pernasDifunto = quantidadeErros >= 4 ? "/ \\" : " ";
+                string pernaEsquerdaDifunto = quantidadeErros >= 4 ? "/" : " ";
+                string pernaDireitaDifunto = quantidadeErros >= 4 ? @" \" : " ";
 
                 Console.WriteLine(" ___________        ");
                 Console.WriteLine(" |/        |        ");
                 Console.WriteLine(" |        {0}       ", cabecaDifunto);
                 Console.WriteLine(" |        {0}{1}{2} ", bracoEsquerdoDifunto, peitoralDifunto, bracoDireitoDifunto);
-                Console.WriteLine(" |        {0}       ", pernasDifunto);
+                Console.WriteLine(" |        {0}{1}       ", pernaEsquerdaDifunto, pernaDireitaDifunto);
                 Console.WriteLine(" | ");
                 Console.WriteLine(" | ");
                 Console.WriteLine("_|________________________________________________________________");
 
             }
-        }
-
         private static int CompararChutesAPalavraSecreta(string palavraSecreta, char[] letrasPalavraSecreta, int tentativasIncorretas, char letraChutada)
         {
             bool letraPertenceAPalavra = false;
